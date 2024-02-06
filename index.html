@@ -46,7 +46,8 @@
                   type="text"
                   name="form-client-name"
                   id="form-client-name"
-                  minlength="3" />
+                  minlength="3"
+                  onkeyup="refresh()" />
               </div>
               <div class="wrapper-input">
                 <label for="select-imoveltipe">Imóvel de interesse</label>
@@ -179,7 +180,7 @@
                 name="clientname"
                 id="clientname"
                 placeholder="Nome do Cliente"
-                required />
+                disabled />
             </div>
           </fieldset>
         </div>
@@ -192,6 +193,10 @@
     </main>
 
     <script>
+      function refresh() {
+        document.getElementById("clientname").value =
+          document.getElementById("form-client-name").value;
+      }
       function print() {
         var canvasPromise = html2canvas(document.body, {
           allowTaint: true,
