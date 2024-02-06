@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&family=Staatliches&display=swap"
+      rel="stylesheet" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <script src="./js/html2canvas.js"></script>
+    <title>Avalie a Mentoria</title>
+  </head>
+
+  <body id="capture">
+    <main>
+      <div id="person-info">
+        <p>Prioridade de Compra</p>
+      </div>
+      <form id="formGL" action="">
+        <div class="wrapper-fieldset">
+          <fieldset>
+            <legend>Informações Básicas</legend>
+            <div class="wrapper-input-inline">
+              <div class="wrapper-input">
+                <label for="select-corretor-name">Nome do Corretor</label>
+                <select
+                  name="select-corretor-name"
+                  id="select-corretor-name"
+                  required>
+                  <option value="" disabled selected hidden>Escolher</option>
+                  <option value="Gabrielle">Gabrielle</option>
+                  <option value="Lucas">Lucas</option>
+                  <option value="Lorean">Lorean</option>
+                  <option value="Moises">Moises</option>
+                  <option value="Pâmela">Pâmela</option>
+                  <option value="Raquel">Raquel</option>
+                  <option value="Samuel">Samuel</option>
+                </select>
+              </div>
+              <div class="wrapper-input">
+                <label for="form-client-name">Nome do(s) Cliente(s)</label>
+                <input
+                  type="text"
+                  name="form-client-name"
+                  id="form-client-name"
+                  minlength="3" />
+              </div>
+              <div class="wrapper-input">
+                <label for="select-imoveltipe">Imóvel de interesse</label>
+                <select
+                  name="select-imoveltipe"
+                  id="select-imoveltipe"
+                  required>
+                  <option value="" disabled selected hidden>Escolher</option>
+                  <option value="Lote">Lote</option>
+                  <option value="Rural">Imóvel Rural</option>
+                  <option value="CasaeApartamento">Casa e Apartamento</option>
+                  <option value="Comercial">Imóvel Comercial</option>
+                </select>
+              </div>
+              <div class="wrapper-input">
+                <label for="select-imovelproprio">Imóvel em que reside</label>
+                <select
+                  name="select-imovelproprio"
+                  id="select-imovelproprio"
+                  required>
+                  <option value="" disabled selected hidden>Escolher</option>
+                  <option value="Proprio">Próprio</option>
+                  <option value="Alugado">Alugado</option>
+                  <option value="Cedido">Cedido</option>
+                  <option value="Herança">Herança</option>
+                </select>
+              </div>
+            </div>
+          </fieldset>
+          <fieldset id="dores">
+            <legend>Buscando o Imóvel Próprio</legend>
+            <div class="wrapper-input">
+              <label for="textarea-imovelideal"
+                >Como é o imóvel ideal pra sua família?</label
+              >
+              <textarea
+                name="textarea-imovelideal"
+                id="textarea-imovelideal"></textarea>
+            </div>
+
+            <div class="wrapper-input">
+              <label for="textarea-dores"
+                >Quais são as suas principais dores hoje no imóvel que reside?
+              </label>
+              <textarea name="textarea-dores" id="textarea-dores"></textarea>
+            </div>
+
+            <div class="wrapper-input">
+              <label for="textarea-contornarsituacao"
+                >Como você faz hoje para contornar essa situação?
+              </label>
+              <textarea
+                name="textarea-contornarsituacao"
+                id="textarea-contornarsituacao"></textarea>
+            </div>
+
+            <div class="wrapper-input">
+              <label for="textarea-imovelnovoresolvera"
+                >E quais dores o imóvel novo resolverá?
+              </label>
+              <textarea
+                name="textarea-imovelnovoresolvera"
+                id="textarea-imovelnovoresolvera"></textarea>
+            </div>
+
+            <div class="wrapper-input">
+              <label for="select-urgencia"
+                >Qual a sua urgência em adquirir esse ano?</label
+              >
+              <select name="select-urgencia" id="select-urgencia" required>
+                <option value="" disabled selected hidden>Escolher</option>
+                <option value="estemes">Dentro deste mês</option>
+                <option value="tresmeses">Nos próximos 3 meses</option>
+                <option value="seismeses">Nos próximos 6 meses</option>
+                <option value="dozemeses">Nos próximos 12 meses</option>
+              </select>
+            </div>
+
+            <div class="wrapper-input-caixa">
+              <a
+                href="https://www8.caixa.gov.br/siopiinternet-web/simulaOperacaoInternet.do?method=inicializarCasoUso&isVoltar=true"
+                target="_blank"
+                >Simulador Habitacional Caixa</a
+              >
+            </div>
+          </fieldset>
+          <fieldset id="links">
+            <legend>Imóveis Vistos</legend>
+            <div class="wrapper-input">
+              <label for="textarea-links"
+                >Cole o LINK dos Imóveis de interesse
+              </label>
+              <textarea name="textarea-links" id="textarea-links"></textarea>
+            </div>
+            <div class="wrapper-date">
+              <div class="wrapper-input">
+                <label for="form-date"
+                  >Data de Hoje<span>(DD/MM/AAAA)</span></label
+                >
+                <input type="date" name="form-date" id="form-date" required />
+              </div>
+              <div class="wrapper-input">
+                <label for="form-date"
+                  >Data da Próxima Visita<span>(DD/MM/AAAA)</span></label
+                >
+                <input type="date" name="form-date" id="form-date" required />
+              </div>
+              <div class="time">
+                <div class="wrapper-input">
+                  <label for="form-start">Das</label>
+                  <input
+                    type="time"
+                    name="form-start"
+                    id="form-start"
+                    required />
+                </div>
+                <div class="wrapper-input">
+                  <label for="form-end">Até</label>
+                  <input type="time" name="form-end" id="form-end" required />
+                </div>
+              </div>
+            </div>
+          </fieldset>
+          <fieldset id="termo">
+            <legend>Termo de Serviço</legend>
+            <div class="wrapper-input">
+              <p>Ass. __________________________________</p>
+              <input
+                type="text"
+                name="clientname"
+                id="clientname"
+                placeholder="Nome do Cliente"
+                required />
+            </div>
+          </fieldset>
+        </div>
+        <div>
+          <button id="print" form="rate-mentorship" onClick="print()">
+            Imprimir
+          </button>
+        </div>
+      </form>
+    </main>
+
+    <script>
+      function print() {
+        var canvasPromise = html2canvas(document.body, {
+          allowTaint: true,
+          useCORS: true,
+          foreignObjectRendering: true,
+        });
+
+        canvasPromise.then(function (canvas) {
+          document.body.appendChild(canvas);
+          const dataURL = canvas.toDataURL("image/png");
+          const cliente = document.getElementById("form-client-name");
+          var aDownloadLink = document.createElement("a");
+          // Add the name of the file to the link
+          aDownloadLink.download = `${cliente.value}.png`;
+          // Attach the data to the link
+          aDownloadLink.href = dataURL;
+          aDownloadLink.click();
+
+          document.body.removeChild(canvas);
+        });
+      }
+    </script>
+  </body>
+</html>
